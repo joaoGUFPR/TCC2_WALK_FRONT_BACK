@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Tags"
+        android:id="@+id/tags"
+        />
+    <item android:title="Festa"
+        android:id="@+id/Festa"
+        />
+    <item android:title="Bar"
+        android:id="@+id/Bar"
+        />
+    <item android:title="Jogos de Tabuleiro"
+        android:id="@+id/JogosTabuleiro"
+        />
+</menu>

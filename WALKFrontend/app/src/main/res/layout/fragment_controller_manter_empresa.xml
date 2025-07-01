@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- Barra superior fixa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="#004AAD">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Perfil"
+            android:textSize="30sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Conteúdo rolável -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <!-- Ícone da Foto de Perfil -->
+            <FrameLayout
+                android:id="@+id/backPicture"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_perfil_background"
+                android:clipToOutline="true"
+                android:elevation="4dp">
+
+                <!-- Imagem de Perfil -->
+                <ImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="Foto do perfil"/>
+
+                <!-- Ícone da Câmera -->
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_photo_camera_24"
+                    android:contentDescription="Ícone de câmera"/>
+            </FrameLayout>
+
+            <!-- Campos de Entrada -->
+            <EditText
+                android:id="@+id/etNomeEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:inputType="text" />
+
+            <EditText
+                android:id="@+id/etEmailEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="E-mail"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:inputType="textEmailAddress"/>
+
+            <EditText
+                android:id="@+id/etUsernameEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="\@user"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/etSenhaEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Senha"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:inputType="text"/>
+
+            <EditText
+                android:id="@+id/etCNPJEmpresa"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="CNPJ"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="8dp"
+                android:padding="8dp"
+                android:inputType="date"/>
+
+            <TextView
+                android:id="@+id/tvDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descrição do perfil"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/etDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:background="@android:drawable/edit_text"
+                android:gravity="top"
+                android:padding="8dp"
+                android:inputType="textMultiLine" />
+
+            <!-- Botão de Salvar -->
+            <Button
+                android:id="@+id/btnSalvar"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#004AAD"
+                android:layout_marginBottom="40dp"
+                android:text="Salvar"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

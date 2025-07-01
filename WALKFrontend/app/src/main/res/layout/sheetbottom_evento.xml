@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvEmpresa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Empresa"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvUserEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Anime Friends"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <TextView
+        android:id="@+id/tvDescricaoTituloEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvDescricaoEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Evento descrição"
+        android:paddingTop="8dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvLocalTituloEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local do Evento"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvLocalEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Local"
+        android:paddingTop="8dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvDataTituloEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Data do Evento"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvDataEvento"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="08/05/2000"
+        android:paddingTop="8dp"
+        android:textSize="14sp" />
+</LinearLayout>

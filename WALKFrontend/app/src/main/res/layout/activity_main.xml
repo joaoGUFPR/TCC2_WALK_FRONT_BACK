@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    tools:context=".controller.MainActivity">
+
+    <!-- Container principal, ocupa todo o espaço restante -->
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Barra de navegação em LinearLayout -->
+    <LinearLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#004AAD"
+        android:orientation="horizontal"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp">
+
+        <!-- Exemplo de item: você pode trocar por ImageButton, MaterialButton, etc. -->
+        <ImageButton
+            android:id="@+id/nav_home"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/baseline_event_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="a" />
+
+        <ImageButton
+            android:id="@+id/nav_search"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/baseline_home_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="a" />
+
+        <ImageButton
+            android:id="@+id/nav_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="8dp"
+            android:src="@drawable/baseline_emergency_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="a" />
+
+        <!-- Adicione quantos botões precisar, sempre com layout_weight="1" para distribuição igual -->
+    </LinearLayout>
+
+</LinearLayout>

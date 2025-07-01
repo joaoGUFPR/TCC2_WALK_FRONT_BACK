@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvAdministrador"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Administrador"
+        android:textStyle="bold"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Caroline @caroline12"
+        android:paddingTop="8dp"
+        android:paddingBottom="16dp"
+        android:textSize="14sp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#CCCCCC" />
+
+    <TextView
+        android:id="@+id/tvDescricaoTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Descrição"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvDescricao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="A comunidade BarRRRRRR é para aqueles interessados em buscar alguém para ir ao bar."
+        android:paddingTop="8dp"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvRegrasTitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Regras"
+        android:textStyle="bold"
+        android:paddingTop="16dp"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tvRegras"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1 - Não insultar outros usuários\n2 - Propor passeios ligados ao tema"
+        android:paddingTop="8dp"
+        android:textSize="14sp" />
+</LinearLayout>

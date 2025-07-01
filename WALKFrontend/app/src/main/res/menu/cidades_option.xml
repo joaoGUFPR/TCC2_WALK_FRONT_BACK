@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Todas"
+        android:id="@+id/todas"
+        />
+    <item android:title="Curitiba"
+        android:id="@+id/curitiba"
+        />
+    <item android:title="Londrina"
+        android:id="@+id/londrina"
+        />
+    <item android:title="São Paulo"
+        android:id="@+id/saoPaulo"
+        />
+</menu>

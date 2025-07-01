@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/svMunicipio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Procure sua cidade…" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMunicipios"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>

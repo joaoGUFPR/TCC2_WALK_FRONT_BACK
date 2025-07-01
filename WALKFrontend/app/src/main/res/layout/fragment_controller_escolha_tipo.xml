@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".controller.ControllerEscolhaTipo">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="#004AAD"
+        android:paddingTop="0sp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Walk"
+            android:textSize="30sp"
+            android:textColor="@color/white">
+
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Escolha o tipo de usuário"
+            android:textSize="30sp"
+            android:textColor="@color/black"></TextView>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btnEmpresa"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#004AAD"
+        android:layout_gravity="center"
+        android:textSize="20dp"
+        app:cornerRadius="30dp"
+        android:text="Empresa"
+        android:textColor="@color/white" />
+
+    <Button
+        android:id="@+id/btnPessoa"
+        android:layout_width="170dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#004AAD"
+        android:textSize="20dp"
+        app:cornerRadius="30dp"
+        android:layout_gravity="center"
+        android:text="Pessoa"
+        android:textColor="@color/white" />
+
+
+</LinearLayout>

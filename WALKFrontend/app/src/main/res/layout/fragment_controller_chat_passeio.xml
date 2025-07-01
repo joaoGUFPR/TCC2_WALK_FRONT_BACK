@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".controller.ControllerChatPasseio">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="#004AAD"
+        android:paddingTop="0sp"
+        >
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="47dp"
+        android:gravity="center"
+        android:text="Chat"
+        android:textSize="30sp"
+        android:textColor="@color/white">
+    </TextView>
+
+    <ImageView
+        android:id="@+id/iVReticenciaBarraChatPasseio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:paddingEnd="10dp"
+        android:src="@drawable/baseline_more_vert"
+        app:tint="@android:color/white" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ComentarioChatRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:clipToPadding="false"
+        tools:itemCount="2"
+        tools:listitem="@layout/list_item_chat_right"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp"
+        android:padding="12dp"
+        android:background="#F6F6F6">
+
+    <EditText
+        android:id="@+id/etComentarioChat"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="8dp"
+        android:background="@android:drawable/edit_text"
+        android:gravity="top"
+        android:padding="8dp"
+        android:inputType="textMultiLine" />
+
+    <!-- Botão Criar Passeio -->
+    <Button
+        android:id="@+id/btnCriarComentarioChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#004AAD"
+        android:layout_gravity="center"
+        android:text="Comentar"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+
+</LinearLayout>
+</LinearLayout>

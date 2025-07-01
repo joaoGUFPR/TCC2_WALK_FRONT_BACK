@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.ControllerManterComunidade">
+
+    <!-- Barra superior fixa -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="#004AAD">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Criar Comunidade"
+            android:textSize="30sp"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+    <!-- Conteúdo rolável -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="2dp">
+                <TextView
+                    android:id="@+id/tVCidade"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Cidade"
+                    android:gravity="center"
+                    android:paddingTop="10sp"
+                    android:textSize="28sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:id="@+id/backPicture"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_margin="30dp"
+                android:background="@drawable/rounded_searchview_background"
+                android:layout_gravity="center">
+
+                <!-- ImageView para cobrir o fundo -->
+                <ImageView
+                    android:id="@+id/ivBackground"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:clipToOutline="true"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/rounded_searchview_background"
+                    android:contentDescription="Imagem de fundo"
+                     />
+
+                <!-- Ícone da câmera para seleção -->
+                <ImageView
+                    android:id="@+id/ivCamera"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/baseline_photo_camera_24"
+                    android:contentDescription="Selecionar imagem" />
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/etNomeComunidade"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nome da comunidade"
+                android:layout_margin="16dp"
+                android:padding="8dp"
+                android:inputType="text" />
+
+            <TextView
+                android:id="@+id/tvDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Descrição"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/etDescricao"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:background="@android:drawable/edit_text"
+                android:gravity="top"
+                android:padding="8dp"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/tvRegras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Regras"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/etRegras"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="16dp"
+                android:background="@android:drawable/edit_text"
+                android:gravity="top"
+                android:padding="8dp"
+                android:inputType="textMultiLine" />
+
+            <TextView
+                android:id="@+id/tvTags"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Tags"
+                android:paddingHorizontal="16dp"
+                android:paddingTop="8dp"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                app:chipSpacingHorizontal="12dp">
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Esporte" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Festa" />
+                <com.google.android.material.chip.Chip
+                    style="@style/Widget.MaterialComponents.Chip.Filter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jogos de Tabuleiro" />
+            </com.google.android.material.chip.ChipGroup>
+
+
+            <Button
+                android:id="@+id/btnCriarComunidade"
+                android:layout_width="150dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#004AAD"
+                android:layout_marginBottom="30dp"
+                android:layout_weight="1"
+                android:text="Criar"
+                android:clipToPadding="false"
+                android:textColor="@color/white"
+                android:padding="12dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".controller.ControllerManterPasseioEvento">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:background="#004AAD"
+        android:paddingTop="0sp"
+
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Evento"
+            android:textSize="30sp"
+            android:textColor="@color/white">
+
+        </TextView>
+    </LinearLayout>
+    <androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        app:cardElevation="4dp">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="18dp">
+
+            <!-- Primeira linha com imagem e textos -->
+
+            <!-- Segunda linha com ícones e horário -->
+            <TableRow
+                android:layout_width="match_parent"
+                app:cardCornerRadius="30dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    app:cardCornerRadius="50dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/iVPerfilPasseioEvento"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/baseline_map_24" />
+                </androidx.cardview.widget.CardView>
+
+            </TableRow>
+        </TableLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/PasseioEventoRV"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:paddingVertical="15dp"
+        android:clipToPadding="false"
+        tools:itemCount="5"
+        tools:listitem="@layout/list_item_passeio_evento"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="0dp"
+        android:padding="12dp"
+        android:background="#F6F6F6">
+
+
+        <!-- Segunda linha com EditText de descrição -->
+        <EditText
+            android:id="@+id/etDescricaoPasseioEvento"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginVertical="8dp"
+            android:background="@android:drawable/edit_text"
+            android:gravity="top"
+            android:padding="8dp"
+            android:inputType="textMultiLine" />
+
+        <!-- Botão Criar Passeio -->
+        <Button
+            android:id="@+id/btnCriarPasseioEvento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#004AAD"
+            android:layout_gravity="center"
+            android:text="Criar Passeio"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</LinearLayout>

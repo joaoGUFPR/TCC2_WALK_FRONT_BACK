@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".controller.ControllerManterChat">
+
+    <!-- Toolbar simples -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="#004AAD">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Editar Chat"
+            android:textSize="20sp"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+
+    <!-- Chat Info Container -->
+    <LinearLayout
+        android:id="@+id/ChatItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_chat_incoming"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tVChat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chat"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+        <TextView
+            android:id="@+id/tvNamePasseio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Nome do Passeio"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+    <!-- Título Membros centralizado -->
+    <TextView
+        android:id="@+id/tVMembros"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Membros"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Lista de Membros -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListaMebros"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        tools:itemCount="3"
+        tools:listitem="@layout/list_item_membros_chat"/>
+
+    <!-- Título Amigos centralizado -->
+    <TextView
+        android:id="@+id/tVAmigos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amigos"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Lista de Amigos -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/ListaComunidades"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        tools:itemCount="3"
+        tools:listitem="@layout/list_item_amigos_chat"/>
+
+    <Button
+        android:id="@+id/btnSalvarChat"
+        android:layout_width="150dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#004AAD"
+        android:layout_marginBottom="40dp"
+        android:text="Salvar"
+        android:textColor="@color/white"
+        android:padding="12dp"
+        android:textSize="16sp" />
+
+</LinearLayout>
