@@ -8,7 +8,7 @@ Siga este guia para instalar e executar tanto o servidor quanto o app em sua má
 ## 📋 Pré‑requisitos
 
 * **Java JDK 11+**
-* **Android Studio Arctic Fox** (ou superior)
+* **Android Studio** (ou superior)
 * **PostgreSQL 13+**
 * **Conexão à mesma rede Wi‑Fi** – tanto o computador quanto o dispositivo Android devem estar na mesma rede local.
 
