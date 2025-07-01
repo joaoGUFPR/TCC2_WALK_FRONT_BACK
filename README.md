@@ -1,4 +1,4 @@
-# PrototipoPasseios
+# WALK
 
 Este repositório, na branch TCC contém o **front‑end Android** e o **back‑end Ktor** para o aplicativo WALK.
 Siga este guia para instalar e executar tanto o servidor quanto o app em sua máquina e dispositivo Android.
