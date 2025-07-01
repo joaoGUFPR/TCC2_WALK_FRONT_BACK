@@ -62,7 +62,8 @@
                     android:id="@+id/ivPerfilPasseio"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:scaleType="centerCrop" />
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/baseline_account_circle_24"/>
             </androidx.cardview.widget.CardView>
 
             <!-- Textos (nome e mensagem) -->

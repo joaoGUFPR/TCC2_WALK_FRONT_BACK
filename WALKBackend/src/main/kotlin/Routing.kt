@@ -27,7 +27,7 @@ fun Application.configureRouting() {
     val passeioEventoDao = PasseioEventoDAO()
     val comentarioPasseioEventoDAO = ComentarioPasseioEventoDAO()
 
-
+    val HOST = "192.168.0.89"
 
     routing {
         static("/uploads") {
@@ -119,7 +119,7 @@ fun Application.configureRouting() {
                         val file = File(uploadsDir, fileName)
                         file.writeBytes(part.streamProvider().readBytes())
                         // Ajuste para o seu host
-                        imageUrl = "http://192.168.0.89:8080/uploads/$fileName"
+                        imageUrl = "http://$HOST:8080/uploads/$fileName"
                     }
                     else -> { /* ignora outros */ }
                 }
@@ -197,7 +197,7 @@ fun Application.configureRouting() {
                         file.writeBytes(part.streamProvider().readBytes())
 
                         // URL para acessar a imagem (ajuste o IP e porta conforme seu ambiente)
-                        imageUrl = "http://192.168.0.89:8080/uploads/$fileName"
+                        imageUrl = "http://$HOST:8080/uploads/$fileName"
                     }
                     else -> { /* Ignora outros tipos de PartData */ }
                 }
@@ -446,7 +446,7 @@ fun Application.configureRouting() {
                         val fileName = part.originalFileName ?: "image_${System.currentTimeMillis()}.jpg"
                         val file = File(uploadsDir, fileName)
                         file.writeBytes(part.streamProvider().readBytes())
-                        imageUrl = "http://192.168.0.89:8080/uploads/$fileName"
+                        imageUrl = "http://$HOST:8080/uploads/$fileName"
                     }
                     else -> { /* Ignora outros tipos de PartData */ }
                 }
@@ -604,7 +604,7 @@ fun Application.configureRouting() {
                         val fileName = part.originalFileName ?: "image_${System.currentTimeMillis()}.jpg"
                         val file = File(uploadsDir, fileName)
                         file.writeBytes(part.streamProvider().readBytes())
-                        imageUrl = "http://192.168.0.89:8080/uploads/$fileName"
+                        imageUrl = "http://$HOST:8080/uploads/$fileName"
                     }
                     else -> { }
                 }
@@ -1171,7 +1171,7 @@ fun Application.configureRouting() {
                         }
 
                         // Ajuste esta URL de acesso conforme seu ambiente (host/porta)
-                        imageUrl = "http://192.168.0.89:8080/uploads/$originalFileName"
+                        imageUrl = "http://$HOST:8080/uploads/$originalFileName"
                     }
                     else -> { /* ignora outros tipos */ }
                 }
@@ -1261,7 +1261,7 @@ fun Application.configureRouting() {
                         val file = File(uploadsDir, fileName).apply {
                             writeBytes(part.streamProvider().readBytes())
                         }
-                        imageUrl = "http://192.168.0.89:8080/uploads/$fileName"
+                        imageUrl = "http://$HOST:8080/uploads/$fileName"
                     }
                     else -> { /* ignora */ }
                 }
@@ -1395,7 +1395,7 @@ fun Application.configureRouting() {
                             ?: "image_${System.currentTimeMillis()}.jpg"
                         val file = File(uploadsDir, fileName)
                         file.writeBytes(part.streamProvider().readBytes())
-                        imageUrl = "http://192.168.0.89:8080/uploads/$fileName"
+                        imageUrl = "http://$HOST:8080/uploads/$fileName"
                     }
                     else -> { /* ignora outros tipos de PartData */ }
                 }
@@ -1493,7 +1493,7 @@ fun Application.configureRouting() {
                             ?: "image_${System.currentTimeMillis()}.jpg"
                         val file = File(uploadsDir, fileName)
                         file.writeBytes(part.streamProvider().readBytes())
-                        imageUrl = "http://192.168.0.89:8080/uploads/$fileName"
+                        imageUrl = "http://$HOST:8080/uploads/$fileName"
                     }
                     else -> { }
                 }
