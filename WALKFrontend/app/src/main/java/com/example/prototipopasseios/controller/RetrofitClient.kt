@@ -21,6 +21,12 @@ object RetrofitClient {
 
     // 2) Constrói o OkHttpClient que usa o interceptor
     private val httpClient = OkHttpClient.Builder()
+        // aumenta timeout de conexão (padrão é 10s)
+        .connectTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
+        // aumenta timeout de leitura de resposta
+        .readTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
+        // aumenta timeout de escrita de request
+        .writeTimeout(60, java.util.concurrent.TimeUnit.SECONDS)
         .addInterceptor(loggingInterceptor)
         .build()
 
